@@ -32,16 +32,16 @@
  */
 
 html {
-  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
 }
 @media (min-width: 48em) {
   html {
-    font-size: 16px;
+    font-size: 15px;
   }
 }
 @media (min-width: 58em) {
   html {
-    font-size: 20px;
+    font-size: 15px;
   }
 }
 
@@ -65,7 +65,7 @@ html {
     top: 0;
     left: 0;
     bottom: 0;
-    width: 18rem;
+    width: 14rem;
     text-align: left;
   }
 }
@@ -88,8 +88,18 @@ html {
   padding-left: 0;
   list-style: none;
 }
-.sidebar-nav-item {
-  display: block;
+
+.sidebar-nav li {
+  display: inline-block;
+  padding: 0 10px;
+}
+@media (min-width: 48em) {
+  .sidebar-nav li {
+    display: block;
+  }
+}
+/*.sidebar-nav-item {
+  display: inline-block;
 }
 a.sidebar-nav-item:hover,
 a.sidebar-nav-item:focus {
@@ -97,7 +107,7 @@ a.sidebar-nav-item:focus {
 }
 .sidebar-nav-item.active {
   font-weight: bold;
-}
+  }*/
 
 /* Sticky sidebar
  *
@@ -141,6 +151,11 @@ a.sidebar-nav-item:focus {
   }
 }
 
+.post img {
+  margin: 20px auto;
+  max-height: 20em;
+  filter: drop-shadow(0 0 10px rgb(220, 220, 220));
+}
 
 /*
  * Reverse layout
