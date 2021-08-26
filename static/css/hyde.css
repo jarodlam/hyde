@@ -41,6 +41,7 @@
  * - Sidebar links
  * - About section
  * - Sidebar nav
+ * - Sidebar socials
  * - Sticky sidebar
  * Posts and pages
  * - Blog post or page title
@@ -299,9 +300,10 @@ abbr[title] {
 /* About section */
 .sidebar-about h1 {
   color: #fff;
-  margin-top: 0;
-  font-family: "Abril Fatface", serif;
+  margin-top: 1rem;
   font-size: 3.25rem;
+  font-weight: 800;
+  line-height: 100%;
 }
 
 /* Sidebar nav */
@@ -318,6 +320,23 @@ abbr[title] {
   .sidebar-nav li {
     display: block;
     padding: 5px 0;
+  }
+}
+
+/* Sidebar socials */
+.sidebar-socials {
+  padding-left: 0;
+  list-style: none;
+}
+
+.sidebar-socials li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+@media (min-width: 48em) {
+  .sidebar-socials li {
+    margin: 0 10px 0 0;
   }
 }
 
