@@ -20,7 +20,6 @@
   <link type="text/css" rel="stylesheet" href="{{ .Site.BaseURL }}css/syntax.css">
   <link type="text/css" rel="stylesheet" href="{{ .Site.BaseURL }}css/hyde.css">
   <link type="text/css" rel="stylesheet" href="{{ .Site.BaseURL }}css/overrides.css">
-  {{ partial "head_fonts.html" . }}
 
   <!-- Icons -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
@@ -30,6 +29,16 @@
   {{ range .AlternativeOutputFormats -}}
     {{ printf `<link href="%s" rel="%s" type="%s" title="%s" />` .Permalink .Rel .MediaType.Type $.Site.Title | safeHTML }}
   {{ end -}}
+  
+  <!-- Browser toolbar theme colour -->
+  {{ if (eq .Site.Params.themeColor "theme-base-08") }} <meta name="theme-color" content="#ac4142"> {{ end }}
+  {{ if (eq .Site.Params.themeColor "theme-base-09") }} <meta name="theme-color" content="#d28445"> {{ end }}
+  {{ if (eq .Site.Params.themeColor "theme-base-0a") }} <meta name="theme-color" content="#f4bf75"> {{ end }}
+  {{ if (eq .Site.Params.themeColor "theme-base-0b") }} <meta name="theme-color" content="#90a959"> {{ end }}
+  {{ if (eq .Site.Params.themeColor "theme-base-0c") }} <meta name="theme-color" content="#75b5aa"> {{ end }}
+  {{ if (eq .Site.Params.themeColor "theme-base-0d") }} <meta name="theme-color" content="#6a9fb5"> {{ end }}
+  {{ if (eq .Site.Params.themeColor "theme-base-0e") }} <meta name="theme-color" content="#aa759f"> {{ end }}
+  {{ if (eq .Site.Params.themeColor "theme-base-0f") }} <meta name="theme-color" content="#8f5536"> {{ end }}
 
   {{ partial "hook_head_end.html" . }}
 </head>
